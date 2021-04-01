@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Diplom1.Models.Product>
+@{
+    ViewBag.Title = "Все пользователи";
+}
+<a asp-action="Create">Добавить товар</a>
+<table class="table">
+    <tr><td>Имя</td><td>Цена</td><td>Описание</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Name</td><td>@item.Price</td><td>@item.Comment</td></tr>
+    }
+</table>
+<div class="form-group">
+    <input type="submit" value="Отправить" class="btn btn-default" />
+</div>
